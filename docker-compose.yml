@@ -5,3 +5,10 @@ proxy:
     - '443:443'
   volumes:
     - '/var/run/docker.sock:/tmp/docker.sock:ro'
+admin:
+  build: ./admin
+  expose:
+    - 8000
+  environment:
+    VIRTUAL_HOST: admin.attakei.net
+    VIRTUAL_PORT: 8000
