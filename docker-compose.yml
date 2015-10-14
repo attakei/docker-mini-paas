@@ -1,5 +1,5 @@
 proxy:
-  image: jwilder/nginx-proxy
+  image: 'jwilder/nginx-proxy'
   ports:
     - '80:80'
     - '443:443'
@@ -8,7 +8,7 @@ proxy:
 admin:
   build: ./admin
   expose:
-    - 8000
+    - '8000'
   environment:
-    VIRTUAL_HOST: admin.attakei.net
-    VIRTUAL_PORT: 8000
+    VIRTUAL_HOST: 'admin.attakei.net'
+    VIRTUAL_PORT: '8000'
